@@ -1,0 +1,3 @@
+/home/wagdaa14/SYP/NewGit/build/CMakeFiles/rebuild_cache.dir
+/home/wagdaa14/SYP/NewGit/build/CMakeFiles/MotionDraw.dir
+/home/wagdaa14/SYP/NewGit/build/CMakeFiles/edit_cache.dir

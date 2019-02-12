@@ -22,17 +22,16 @@ int main() {
         camera.getCurrentFrame();
         Line line = camera.compareCurrentFrameToSelectedColor();
         camera.showCurrentFrame();
-
         drawWindow.drawNewLine(line);
 
         if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
             drawWindow.clicked(sf::Mouse::getPosition(drawWindow).x, sf::Mouse::getPosition(drawWindow).y);
         }
 
-        int c = waitKey(10);
-        if(c!=-1){
-            break;
-        }
+//        int c = waitKey(10);
+//        if(c!=-1){
+//            break;
+//        }
 
         drawWindow.display();
     }

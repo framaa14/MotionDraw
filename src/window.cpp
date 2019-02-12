@@ -1,7 +1,9 @@
 #include "window.h"
 
+
 Window::Window(int width, int height, std::string title){
     this->create(sf::VideoMode(width, height), title);
+    lineColor = sf::Color(0,0,0,255);
 }
 
 void Window::drawNewLine(Line line){
@@ -12,17 +14,36 @@ void Window::drawNewLine(Line line){
             sf::Vertex(sf::Vector2f(line.getBPoint().x, line.getBPoint().y))
         };
 
-        vertLine[0].color = line.getColor();
-        vertLine[1].color = line.getColor();
+        vertLine[0].color = lineColor;
+        vertLine[1].color = lineColor;
         this->draw(vertLine,2,sf::Lines);
     }
+}
+
+void Window::setLineColor(int red, int green, int blue){
+    lineColor = sf::Color(red,green,blue,255);
 }
 
 void Window::onNewBtnClicked(){
     //TODO: open new Window
     canvas = Canvas("TestCanvas",300,300);
-
+    Window w(1920,1080, "MainWindow");
+        w.clear(sf::Color(249,249,249,255));
+        w.display();
     this->draw(canvas);
+}
+
+void Window::onColorBtnClicked(){
+    std::string red;
+    std::string green;
+    std::string blue;
+    std::cout << "RED-Value: ";
+    std::cin >> red;
+    std::cout << "GREEN-Value: ";
+    std::cin >> green;
+    std::cout << "BLUE-Value: ";
+    std::cin >> blue;
+    setLineColor(red,green,blue);
 }
 
 void Window::clicked(int x, int y){
@@ -33,7 +54,16 @@ void Window::clicked(int x, int y){
             if(buttonText == "New"){
                 onNewBtnClicked();
             }
+            else if(buttonText == "Color")
+            {
+                onColorBtnClicked();
+            }
+            else if(buttonText == "Thickness")
+            {
+                // Thickness Window
+            }
         }
+
     }
 }
 

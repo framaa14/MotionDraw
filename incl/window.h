@@ -13,6 +13,7 @@ public:
     void drawButtons();
     void drawNewLine(Line line);
     void clicked(int x, int y);
+    void setLineColor(int red, int green, int blue);
     ~Window();
 
 private:
@@ -21,4 +22,6 @@ private:
 
     //Button Events
     void onNewBtnClicked();
+    void onColorBtnClicked();
+    sf::Color lineColor;
 };

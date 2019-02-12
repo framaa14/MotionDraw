@@ -20,8 +20,8 @@ public:
     ~Line();
 
 private:
-    int x1,x2,y1,y2;
     sf::Color color;
+    int x1,x2,y1,y2;
 };
 
 #endif // LINE_H
