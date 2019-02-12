@@ -34,9 +34,9 @@ void Window::onNewBtnClicked(){
 }
 
 void Window::onColorBtnClicked(){
-    std::string red;
-    std::string green;
-    std::string blue;
+    int red;
+    int green;
+    int blue;
     std::cout << "RED-Value: ";
     std::cin >> red;
     std::cout << "GREEN-Value: ";
