@@ -1,0 +1,3 @@
+/home/stemra/Schreibtisch/syp/build/CMakeFiles/rebuild_cache.dir
+/home/stemra/Schreibtisch/syp/build/CMakeFiles/MotionDraw.dir
+/home/stemra/Schreibtisch/syp/build/CMakeFiles/edit_cache.dir

@@ -21,4 +21,5 @@ private:
 
     //Button Events
     void onNewBtnClicked();
+    void onSaveBtn();
 };

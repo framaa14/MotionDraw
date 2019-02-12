@@ -9,7 +9,7 @@ int main() {
     drawWindow.drawButtons();
     drawWindow.display();
 
-    Camera camera;
+   // Camera camera;
 
     while(drawWindow.isOpen()){
         sf::Event event;
@@ -19,11 +19,11 @@ int main() {
                 drawWindow.close();
         }
 
-        camera.getCurrentFrame();
+      /*  camera.getCurrentFrame();
         Line line = camera.compareCurrentFrameToSelectedColor();
-        camera.showCurrentFrame();
+        camera.showCurrentFrame(); */
 
-        drawWindow.drawNewLine(line);
+       // drawWindow.drawNewLine(line);
 
         if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
             drawWindow.clicked(sf::Mouse::getPosition(drawWindow).x, sf::Mouse::getPosition(drawWindow).y);
